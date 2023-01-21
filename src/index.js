@@ -9,7 +9,7 @@ connectDB()
 import sockets from "./sockets";
 
 const server = http.createServer(app)
-const httpServer = server.listen(puerto)
+const httpServer = server.listen(PORT)
 
 const io = new WebSocketServer(httpServer)
 sockets(io)
