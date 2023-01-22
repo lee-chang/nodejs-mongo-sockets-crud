@@ -21,7 +21,7 @@ export default (io) => {
 
         socket.on("client:getNote", async(id) => {
             const note = await Note.findById(id)
-            io.emit('server:selectedNote',  note)
+            socket.emit('server:selectedNote',  note)
         })
 
         socket.on("client:updateNote", async (updatedNote) => {
